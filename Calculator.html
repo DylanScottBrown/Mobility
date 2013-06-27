@@ -1,0 +1,76 @@
+<!-- Assigns document type -->
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Character encoding -->
+	<meta charset="utf-8">
+	<!-- The view  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+	<!-- Name of the tab--> 
+	<title>Simple Calculator</title>
+	<!-- Reference to css styling external file. -->
+	<link rel="stylesheet" href="calculator.css">
+</head>
+	<!-- Heading -->
+	<h1>Dylan's Simple Calculator</h1>
+
+	<!-- Container for the calculator -->
+	<form id = "calculator" name="Keypad" action="">
+
+	<!-- This div holds the text input and is read only-->
+	<div class = "TextInput">
+		<input name="ReadOut" type="text" value="0" size = width readonly>
+	</div>
+
+	<!-- This div holds the memory buttons-->
+	<div class = "SmallButtons">
+		<input type="button" value="MC" onclick="MemClear()">
+		<input type="button" value="M+" onclick="MemPlus()">
+		<input type="button" value="M-" onclick="MemMinus()">
+		<input type="button" value="MR" onclick="MemCall()">
+	</div>
+
+	<!-- This div holds clear and operator buttons-->
+	<div class = "SmallButtons">
+		<input type="button" value="C" onclick="Clear()">
+		<input type="button" value="CE" onclick="ClearEntry()">
+		<input type="button" value="/" onclick="Operation('/')">
+		<input type="button" value="*" onclick="Operation('*')">
+	</div>
+
+	<!-- This div holds number and operator buttons-->
+	<div class = "SmallButtons">
+		<input type="button" value="7" onclick="NumPressed(7)">
+		<input type="button" value="8" onclick="NumPressed(8)">
+		<input type="button" value="9" onclick="NumPressed(9)">
+		<input type="button" value="+" onclick="Operation('+')">
+	</div>
+
+	<!-- This div holds number and operator buttons-->
+	<div class = "SmallButtons">
+		<input type="button" value="4" onclick="NumPressed(4)">
+		<input type="button" value="5" onclick="NumPressed(5)">
+		<input type="button" value="6" onclick="NumPressed(6)">
+		<input type="button" value="-" onclick="Operation('-')">
+	</div>
+
+	<!-- This div holds numbers and a decimal button-->
+	<div class = "SmallButtons">
+		<input type="button" value="1" onclick="NumPressed(1)">
+		<input type="button" value="2" onclick="NumPressed(2)">
+		<input type="button" value="3" onclick="NumPressed(3)">
+		<input type="button" value="." onclick="Decimal()">
+	</div>
+
+	<!-- This div holds a number and equals button-->
+	<div class = "LastRowButtons">
+		<input type="button" value="0" onclick="NumPressed(0)">
+		<input type="button" value="=" onclick="Operation('=')">
+	</div>
+	</form>
+	<!-- Reference to javascript external file, for method calls. -->
+	<script src="calculator.js" type="text/javascript"></script>
+<body>
+
+</body>
+</html>
